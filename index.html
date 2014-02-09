@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Leila & Ramin</title>
+<link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="normalize.css">
+
+<style type="text/css">
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  font-size: 14pt;
+  background: white url(http://subtlepatterns.com/patterns/white_wall_hash.png);
+  color: #222;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  color: #a45856;
+  text-decoration: none;
+}
+a:hover {
+  color: #613331;
+  text-decoration: underline;
+}
+
+iframe {
+  display: block;
+}
+
+.photo-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  border-bottom: 1px solid #ccc;
+}
+
+.photo-carousel .photo {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+.photo-carousel .photo.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.photo-1 {
+  background-image: url(http://scontent-b-iad.xx.fbcdn.net/hphotos-prn2/v/t35/1499292_10153626666650607_191106900_o.jpg?oh=df74363d3cf53eb5b9cc044d717fed1f&oe=52F9B942)
+}
+.photo-2 {
+  background-image: url(http://scontent-b-iad.xx.fbcdn.net/hphotos-prn2/v/t34/992219_10102333664599239_1400477436_n.jpg?oh=51f388ac556d82749f840d1074a5530e&oe=52F9B7F5);
+}
+.photo-3 {
+  background-image: url(http://scontent-a-iad.xx.fbcdn.net/hphotos-ash3/t1/534460_10101369699388249_1125948232_n.jpg);
+}
+.photo-4 {
+  background-image: url(http://scontent-a-iad.xx.fbcdn.net/hphotos-ash2/t1/538943_10101369704443119_1064220249_n.jpg);
+}
+.photo-5 {
+  background-image: url(http://scontent-a-iad.xx.fbcdn.net/hphotos-ash2/t1/1000811_10101993185487109_1867641853_n.jpg);
+}
+.photo-6 {
+  background-image: url(http://scontent-a-iad.xx.fbcdn.net/hphotos-ash3/t31/176458_10101464340371959_1095796741_o.jpg);
+}
+.photo-7 {
+  background-image: url(http://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-ash2/t31/336270_10101369681923249_1143330318_o.jpg);
+}
+.photo-8 {
+  background-image: url(http://scontent-b-iad.xx.fbcdn.net/hphotos-frc3/t1/380357_10101193729134049_1027750180_n.jpg);
+}
+.photo-9 {
+  background-image: url(http://scontent-a-iad.xx.fbcdn.net/hphotos-ash2/t1/390946_10100811172076459_1800410256_n.jpg);
+}
+
+.title-area {
+  position: absolute;
+  z-index: 2;
+  bottom: -150px;
+  left: 50%;
+  background-color: white;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.title-area .title {
+  padding: 50px 0 0;
+  font-family: 'Dancing Script', cursive;
+  font-size: 25pt;
+}
+.title-area .arrow {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(213, 213, 213, 0);
+  border-top-color: #f0f0f0;
+  border-width: 20px;
+  margin-left: -20px;
+}
+
+.main {
+  position: absolute;
+  top: 100%;
+  width: 600px;
+  left: 50%;
+  margin-left: -300px;
+}
+.main .inner {
+  padding: 40px;
+  background-color: white;
+}
+
+.main header {
+  text-align: center;
+}
+
+.main section {
+  margin: 100px 0;
+  text-align: center;
+}
+
+.map {
+  display: block;
+  margin: 0 -60px;
+  border: 8px solid white;
+}
+
+img.divider {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.preview {
+  margin: 0 -60px;
+}
+.preview img {
+  display: block;
+  width: 100%;
+  border: 8px solid white;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="photo-carousel">
+  <div class="photo active photo-1"></div>
+  <div class="photo photo-2"></div>
+  <div class="photo photo-3"></div>
+  <div class="photo photo-4"></div>
+  <div class="photo photo-5"></div>
+  <div class="photo photo-6"></div>
+  <div class="photo photo-7"></div>
+  <div class="photo photo-8"></div>
+  <div class="photo photo-9"></div>
+</div>
+
+<div class="title-area">
+  <div class="title">Leila &amp; Ramin</div>
+  <div class="date">October 12, 2014</div>
+  <div class="arrow"></div>
+</div>
+
+<article class="main">
+  <div class="inner">
+    <section class="">
+      <header>
+        <h1>Welcome Guests</h1>
+      </header>
+
+      <p>Dear friends and family. We are so thrilled and blessed to share
+      in this experience with you. Please use this website (built by the
+      bride and groom to be), to help you find all the information about our
+      special day. If you have any questions, feel free to contact us!</p>
+    </section>
+
+    <img class="divider" src="http://readingromances.files.wordpress.com/2011/12/black-divider18.gif">
+
+    <section>
+      <header>
+        <h1>Ceremony &amp; Reception</h1>
+      </header>
+
+      <p>
+        <address>
+          <strong>Sleepy Hollow Country Club</strong><br>
+          777 Albany Post Rd.<br>
+          Briarcliff Manor, NY 10510<br>
+        </address>
+      </p>
+
+      <div class="map">
+        <iframe src="http://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3005.2321565494!2d-73.86035439999999!3d41.129457699999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2c0619adc0163%3A0x653b627a530f951!2s777+Albany+Post+Rd!5e0!3m2!1sen!2sus!4v1391983600765" width="100%" height="250" frameborder="0" style="border:0"></iframe>
+      </div>
+
+      <p>Ceremony will begin <strong>prompty at 5:30pm</strong>
+      with the reception immediately following.</p>
+    </section>
+
+    <section>
+      <header>
+        <h1>Registry</h1>
+      </header>
+
+      <p>Should you choose to honor us with a gift, we would humbly accept contributions
+      to our newly married life.</p>
+
+      <div class="preview">
+        <a href="http://www.zola.com/registry/leilaandramin" target="_blank">
+          <img src="http://res.cloudinary.com/dfjortejp/image/upload/c_scale,w_1000/v1391988924/Screen_Shot_2014-02-09_at_6_34_57_PM_tv6uuc.jpg">
+
+          <p>http://www.zola.com/registry/leilaandramin</p>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <header>
+        <h1>Guest Information</h1>
+      </header>
+
+      <p>Information about the ceremony. How to get there, etc.</p>
+    </section>
+  </div>
+</article>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript">
+  var titleArea = $('.title-area');
+  var mainArea = $('.main');
+  var carousel = $('.photo-carousel');
+  var firstPhoto = carousel.find('.photo-1');
+  var activePhoto;
+  var nextPhoto;
+
+  setInterval(function () {
+    activePhoto = carousel.find('.photo.active');
+    nextPhoto = activePhoto.next().length === 0 ? firstPhoto : activePhoto.next();
+
+    activePhoto.removeClass('active');
+    nextPhoto.addClass('active');
+  }, 3000);
+
+  titleArea.on('click', function () {
+    $('html, body').animate({
+      scrollTop: mainArea.offset().top
+    }, 1000);
+  });
+</script>
+
+</body>
+</html>
