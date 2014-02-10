@@ -42,7 +42,6 @@ iframe {
   right: 0;
   bottom: 0;
   background-color: #000;
-  border-bottom: 1px solid #ccc;
 }
 
 .photo-carousel .photo {
@@ -57,7 +56,19 @@ iframe {
   background-position: bottom center;
 
   -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -ms-transition: opacity 500ms;
   transition: opacity 500ms;
+}
+
+.photo-carousel .photo .copyright {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 10pt;
+  opacity: .7;
 }
 
 .photo-carousel .photo.active {
@@ -113,7 +124,7 @@ iframe {
 }
 .title-area .arrow {
   position: absolute;
-  top: 120px;
+  top: 125px;
   left: 50%;
   border: solid transparent;
   height: 0;
@@ -174,14 +185,18 @@ img.divider {
 <body>
 
 <div class="photo-carousel">
-  <div class="photo active photo-1"></div>
+  <div class="photo active photo-1">
+    <div class="copyright">Photo credit: Nasim Mobasheri</div>
+  </div>
   <div class="photo photo-2"></div>
   <div class="photo photo-3"></div>
   <div class="photo photo-4"></div>
   <div class="photo photo-5"></div>
   <div class="photo photo-6"></div>
   <div class="photo photo-7"></div>
-  <div class="photo photo-8"></div>
+  <div class="photo photo-8">
+    <div class="copyright">Photo credit: Nasim Mobasheri</div>
+  </div>
   <div class="photo photo-9"></div>
 </div>
 
@@ -233,7 +248,7 @@ img.divider {
 
       <div class="preview">
         <a href="http://www.zola.com/registry/leilaandramin" target="_blank">
-          <img src="http://res.cloudinary.com/dfjortejp/image/upload/c_scale,w_1000/v1391988924/Screen_Shot_2014-02-09_at_6_34_57_PM_tv6uuc.jpg">
+          <img src="http://res.cloudinary.com/i8ramin/image/upload/c_scale,w_1000/v1391988924/Screen_Shot_2014-02-09_at_6_34_57_PM_tv6uuc.jpg">
 
           <p>http://www.zola.com/registry/leilaandramin</p>
         </a>
@@ -278,12 +293,12 @@ img.divider {
 
     activePhoto.removeClass('active');
     nextPhoto.addClass('active');
-  }, 3000);
+  }, 4000);
 
   titleArea.on('click', function () {
     $('html, body').animate({
       scrollTop: mainArea.offset().top
-    }, 1000);
+    }, 500);
   });
 </script>
 
