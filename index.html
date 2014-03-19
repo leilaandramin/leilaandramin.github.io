@@ -31,6 +31,14 @@ a:hover {
   text-decoration: underline;
 }
 
+strong {
+  font-weight: bold;
+  font-size: 15pt;
+}
+strong.hilite {
+  /*background-color: #f8f8f8;*/
+}
+
 iframe {
   display: block;
 }
@@ -40,7 +48,7 @@ iframe {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 10%;
   background-color: #000;
 }
 
@@ -98,7 +106,7 @@ iframe {
   background-image: url(//res.cloudinary.com/i8ramin/image/upload/c_fill,g_faces,q_35,w_2048/v1391994823/leilaandramin/photo-07.jpg);
 }
 .photo-8 {
-  background-image: url(//res.cloudinary.com/i8ramin/image/upload/c_fill,g_faces,q_35,w_2048/v1391994823/leilaandramin/photo-08.jpg);
+  background-image: url(//res.cloudinary.com/i8ramin/image/upload/c_fill,g_faces,q_35,w_2048/v1395194539/leilaandramin/photo-10.jpg);
 }
 .photo-9 {
   background-image: url(//res.cloudinary.com/i8ramin/image/upload/c_crop,g_faces,q_65,h_650,w_1000/v1391994824/leilaandramin/photo-09.jpg);
@@ -107,12 +115,14 @@ iframe {
 .title-area {
   position: absolute;
   z-index: 2;
-  bottom: -150px;
+  top: 100%;
+  /*bottom: 0px;*/
   left: 50%;
   background-color: white;
   text-align: center;
   width: 300px;
   height: 300px;
+  margin-top: -150px;
   margin-left: -150px;
   border-radius: 50%;
   cursor: pointer;
@@ -132,16 +142,17 @@ iframe {
   position: absolute;
   pointer-events: none;
   border-color: rgba(213, 213, 213, 0);
-  border-top-color: #f0f0f0;
+  border-top-color: #ccc;
   border-width: 20px;
   margin-left: -20px;
 }
 
 .main {
   position: absolute;
-  top: 100%;
+  top: 90%;
   width: 600px;
   left: 50%;
+  z-index: 10;
   margin-left: -300px;
 }
 .main .inner {
@@ -154,7 +165,7 @@ iframe {
 }
 
 .main section {
-  margin: 100px 0;
+  margin: 50px 0 100px;
   text-align: center;
 }
 
@@ -191,20 +202,22 @@ img.divider {
   <div class="photo photo-2"></div>
   <div class="photo photo-3"></div>
   <div class="photo photo-4"></div>
-  <div class="photo photo-5"></div>
+  <!-- <div class="photo photo-5"></div> -->
   <div class="photo photo-6"></div>
   <div class="photo photo-7"></div>
   <div class="photo photo-8">
     <div class="copyright">Photo credit: Nasim Mobasheri</div>
   </div>
   <div class="photo photo-9"></div>
+
+  <div class="title-area">
+    <div class="title">Leila &amp; Ramin</div>
+    <div class="date">October 12, 2014</div>
+    <div class="arrow"></div>
+  </div>
 </div>
 
-<div class="title-area">
-  <div class="title">Leila &amp; Ramin</div>
-  <div class="date">October 12, 2014</div>
-  <div class="arrow"></div>
-</div>
+  
 
 <article class="main">
   <div class="inner">
@@ -234,7 +247,7 @@ img.divider {
         </address>
       </p>
 
-      <p>Ceremony will begin <strong>promptly at 5:00pm</strong>
+      <p>Ceremony will begin <em>promptly at 5:00pm</em>
       with the reception immediately following.</p>
     </section>
 
@@ -244,7 +257,7 @@ img.divider {
       </header>
 
       <p>Should you choose to honor us with a gift, we would humbly accept contributions
-      to our newly married life.</p>
+      to our newly married life or our honeymoon by clicking the link below ;-)</p>
 
       <div class="preview">
         <a href="http://www.zola.com/registry/leilaandramin" target="_blank">
@@ -262,10 +275,32 @@ img.divider {
 
       <p>If you need accomodations for the weekend of
       the wedding, the closest hotel is the
-      <a href="http://doubletree3.hilton.com/en/hotels/new-york/doubletree-by-hilton-hotel-tarrytown-TERHIDT/index.html">Terrytown DoubleTree Hilton Hotel</a>, which is a short 10-15 min. drive down the road. There is a room block set aside for our guests, so be sure to use the following code [CODE] when reserving a room.</p>
+      <a href="http://www.sheratontarrytown.com">Sheraton Tarrytown Hotel</a>, which is a short 10-15 min. drive down the road. There is a room block set aside for our guests (at $149/night), so be sure to use the following code [CODE] when reserving a room.</p>
 
-      <p>Shuttle service will be available to and from the hotel and the country club  [TIME] if you
-      require transporation. You may also drive to the reception, where parking is available.  </p>
+      <p>Shuttle service will be available to and from the hotel and the country club at [TIME] if you
+      require transporation. You may also drive to the reception, where parking is available.</p>
+
+      <p>Note: Local taxi companies &amp; contact information:</p>
+      <p>
+        <a href="http://www.tarrytowntaxiservice.com/Contact-Us.html">
+          Tarrytown Taxi Service<br>
+          (914) 631-8700
+        </a>
+      </p>
+      ---
+      <p>
+        Annie's Taxi<br>
+        (914) 333-0434
+      </p>
+
+      <br>
+      <p>
+        <address>
+          <strong>Sleepy Hollow Country Club</strong><br>
+          777 Albany Post Rd.<br>
+          Briarcliff Manor, NY 10510<br>
+        </address>
+      </p>
     </section>
 
     <img class="divider" src="divider.gif">
@@ -284,12 +319,13 @@ img.divider {
   var mainArea = $('.main');
   var carousel = $('.photo-carousel');
   var firstPhoto = carousel.find('.photo-1');
-  var activePhoto;
-  var nextPhoto;
+  var allPhotos = carousel.find('.photo');
+  var activePhoto, nextPhoto, photoIndex = 0;
 
   setInterval(function () {
+    photoIndex = Math.floor((Math.random() * 100) % allPhotos.length);
     activePhoto = carousel.find('.photo.active');
-    nextPhoto = activePhoto.next().length === 0 ? firstPhoto : activePhoto.next();
+    nextPhoto = activePhoto.next('.photo').length === 0 ? firstPhoto : activePhoto.next('.photo');
 
     activePhoto.removeClass('active');
     nextPhoto.addClass('active');
@@ -297,8 +333,8 @@ img.divider {
 
   titleArea.on('click', function () {
     $('html, body').animate({
-      scrollTop: mainArea.offset().top
-    }, 500);
+      scrollTop: mainArea.offset().top + 20
+    }, 800);
   });
 </script>
 
