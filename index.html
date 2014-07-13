@@ -33,6 +33,10 @@ a:hover {
   text-decoration: underline;
 }
 
+p {
+  margin: 0 0 2rem 0;
+}
+
 strong {
   font-weight: bold;
   font-size: 15pt;
@@ -86,35 +90,29 @@ iframe {
   z-index: 1;
 }
 
+
 .photo-1 {
-  background-image: url(//res.cloudinary.com/i8ramin/image/upload/c_fill,g_faces,q_35,w_2048/v1391994823/leilaandramin/photo-01.jpg)
+  background-image: url(//res.cloudinary.com/i8ramin/image/upload/c_fill,g_faces,w_2048/v1405270383/photo-00.jpg)
 }
 .photo-2 {
-  background-image: url(//res.cloudinary.com/i8ramin/image/upload/c_fill,g_faces,q_35,w_2048/v1391994823/leilaandramin/photo-02.jpg);
-}
-.photo-3 {
   background-image: url(//res.cloudinary.com/i8ramin/image/upload/c_fill,g_faces,q_35,w_2048/v1391994823/leilaandramin/photo-03.jpg);
 }
-.photo-4 {
+.photo-3 {
   background-image: url(//res.cloudinary.com/i8ramin/image/upload/c_fill,g_faces,q_35,w_2048/v1391994823/leilaandramin/photo-04.jpg);
 }
-.photo-5 {
+.photo-4 {
   background-image: url(//res.cloudinary.com/i8ramin/image/upload/c_fill,g_faces,q_35,w_2048/v1391994823/leilaandramin/photo-05.jpg);
 }
-.photo-6 {
+.photo-5 {
   background-image: url(//res.cloudinary.com/i8ramin/image/upload/c_fill,g_faces,q_35,w_2048/v1391994823/leilaandramin/photo-06.jpg);
 }
-.photo-7 {
+.photo-6 {
   background-image: url(//res.cloudinary.com/i8ramin/image/upload/c_fill,g_faces,q_35,w_2048/v1391994823/leilaandramin/photo-07.jpg);
 }
-.photo-8 {
+.photo-7 {
   background-image: url(//res.cloudinary.com/i8ramin/image/upload/c_fill,g_faces,q_35,w_2048/v1395194539/leilaandramin/photo-10.jpg);
 }
-/*
-.photo-9 {
-  background-image: url(//res.cloudinary.com/i8ramin/image/upload/c_crop,g_faces,q_65,h_650,w_1000/v1391994824/leilaandramin/photo-09.jpg);
-}
-*/
+
 
 .title-area {
   position: absolute;
@@ -165,6 +163,7 @@ iframe {
 
 .main header {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .main section {
@@ -199,19 +198,15 @@ img.divider {
 <body>
 
 <div class="photo-carousel">
-  <div class="photo active photo-1">
-    <div class="copyright">Photo credit: Nasim Mobasheri</div>
-  </div>
+  <div class="photo photo-1 active"></div>
+  <!--
   <div class="photo photo-2"></div>
   <div class="photo photo-3"></div>
   <div class="photo photo-4"></div>
-  <!-- <div class="photo photo-5"></div> -->
+  <div class="photo photo-5"></div>
   <div class="photo photo-6"></div>
   <div class="photo photo-7"></div>
-  <div class="photo photo-8">
-
-  </div>
-  <!-- <div class="photo photo-9"></div> -->
+  -->
 
   <div class="title-area">
     <div class="title">Leila &amp; Ramin</div>
@@ -231,7 +226,7 @@ img.divider {
 
       <p>We are so thrilled to share
       this momentous experience with you! Each one of you has beared witness to our love story and the evolution of our relationship through the years.
-      We feel so blessed to embark upon this newest chapter of our lives with all of you by our side. 
+      We feel so blessed to embark upon this newest chapter of our lives with all of you by our side.
       Please utilize this website to gather all necessary information relating to our
       special day. If you have any questions, feel free to contact us!</p>
     </section>
@@ -253,22 +248,6 @@ img.divider {
 
       <p>Ceremony will begin <em>promptly at 5:30pm</em>
       with the reception immediately following.</p>
-    </section>
-
-    <section>
-      <header>
-        <h1>Registry</h1>
-      </header>
-
-      
-
-      <div class="preview">
-        <a href="//www.zola.com/registry/leilaandramin" target="_blank">
-          <img src="//res.cloudinary.com/i8ramin/image/upload/c_scale,q_70,w_1200/v1399254281/Screen_Shot_2014-05-04_at_9_44_14_PM_advihq.jpg">
-
-          <p>zola.com/registry/leilaandramin</p>
-        </a>
-      </div>
     </section>
 
     <section>
@@ -306,21 +285,35 @@ img.divider {
       </p>
     </section>
 
-    <!--
     <section>
       <header>
-        <h2>
-          Formal invitations forthcoming.<br>
-          You may also <a href="//uw.theknot.com/view/8138228083098210" target="_blank">RSVP online.</a></h2>
+        <h1>RSVP Online</h1>
       </header>
+
+      <!-- Change the width and height values to suit you best -->
+      <div class="typeform-widget" data-url="https://leilaandramin.typeform.com/to/rV5W6B" data-text="RSVP" style="width:100%;height:500px;"></div>
+      <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
     </section>
-    -->
+
+    <section>
+      <header>
+        <h1>Registry</h1>
+      </header>
+
+      <div class="preview">
+        <a href="//www.zola.com/registry/leilaandramin" target="_blank">
+          <img src="//res.cloudinary.com/i8ramin/image/upload/c_scale,q_70,w_1200/v1399254281/Screen_Shot_2014-05-04_at_9_44_14_PM_advihq.jpg">
+
+          <p>zola.com/registry/leilaandramin</p>
+        </a>
+      </div>
+    </section>
 
     <img class="divider" src="divider.gif">
 
     <section>
-      <p>Thank you and looking forward to seeing you all there!</p>
-      <em>Leila &amp; Ramin</em>
+      <p>"So I will always lean my heart as close to your soul as I can."</p>
+      <em>&ndash; Hafez</em>
     </section>
 
   </div>
@@ -346,14 +339,14 @@ img.divider {
   var allPhotos = carousel.find('.photo');
   var activePhoto, nextPhoto, photoIndex = 0;
 
-  setInterval(function () {
-    photoIndex = Math.floor((Math.random() * 100) % allPhotos.length);
-    activePhoto = carousel.find('.photo.active');
-    nextPhoto = activePhoto.next('.photo').length === 0 ? firstPhoto : activePhoto.next('.photo');
+  // setInterval(function () {
+  //   photoIndex = Math.floor((Math.random() * 100) % allPhotos.length);
+  //   activePhoto = carousel.find('.photo.active');
+  //   nextPhoto = activePhoto.next('.photo').length === 0 ? firstPhoto : activePhoto.next('.photo');
 
-    activePhoto.removeClass('active');
-    nextPhoto.addClass('active');
-  }, 4000);
+  //   activePhoto.removeClass('active');
+  //   nextPhoto.addClass('active');
+  // }, 4000);
 
   titleArea.on('click', function () {
     $('html, body').animate({
