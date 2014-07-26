@@ -84,6 +84,9 @@ iframe {
   font-size: 10pt;
   opacity: .7;
 }
+.photo-carousel .photo .copyright strong {
+  font-size: 12pt;
+}
 .photo-carousel .photo .copyright a {
   color: white;
 }
@@ -175,9 +178,14 @@ iframe {
 }
 
 .map {
-  display: block;
-  margin: 0 -60px;
+  /*margin: 0 -60px;*/
   border: 8px solid white;
+  text-align: center;
+  background-color: white;
+}
+.map img {
+  display: inline-block;
+  width: 70%;
 }
 
 img.divider {
@@ -203,7 +211,8 @@ img.divider {
 <div class="photo-carousel">
   <div class="photo photo-1 active">
     <div class="copyright">
-      <a href="http://www.ryanandheidi.com/">Ryan &amp; Heidi Studio</a>
+      <strong>Ryan &amp; Studio</strong><br>
+      <a href="http://www.ryanandheidi.com/ramin-leila-engaged-brooklyn/">See more from this set</a>
     </div>
   </div>
   <!--
@@ -255,6 +264,12 @@ img.divider {
 
       <p>Ceremony will begin <em>promptly at 5:30pm</em>
       with the reception immediately following.</p>
+
+      <div class="map">
+        <a href="//goo.gl/1v2esr">
+          <img src="//res.cloudinary.com/i8ramin/image/upload/v1406390030/map.png">
+        </a>
+      </div>
     </section>
 
     <section>
